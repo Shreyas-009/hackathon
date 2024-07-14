@@ -31,7 +31,9 @@ app.use(
 );
 
 app.use(express.json());
-
+app.get("/",(req,res)=>{
+  res.send('Server is up and running!')
+})
 app.use("/api/auth", authRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/pickers", pickerRoutes);

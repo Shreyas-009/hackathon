@@ -7,7 +7,10 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post(`http://localhost:8080/api/auth/register`, data);
+      await axios.post(
+        `https://rag-pickers-app.vercel.app/api/auth/register`,
+        data
+      );
       alert("Registration successful!");
     } catch (err) {
       console.error(err);

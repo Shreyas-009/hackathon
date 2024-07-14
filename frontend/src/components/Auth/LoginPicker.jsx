@@ -12,7 +12,7 @@ const LoginPicker = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BASE_URL}/auth/login`,
+        `https://rag-pickers-app.vercel.app/auth/login`,
         data
       );
       login(response.data.token);

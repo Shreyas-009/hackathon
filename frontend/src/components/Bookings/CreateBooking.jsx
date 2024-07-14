@@ -10,11 +10,15 @@ const CreateBooking = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post(`http://localhost:8080/api/bookings`, data, {
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      await axios.post(
+        `https://rag-pickers-app.vercel.app/api/bookings`,
+        data,
+        {
+          headers: {
+            "x-auth-token": token,
+          },
+        }
+      );
       toast.success("Booking created successfully!");
     } catch (err) {
       toast.error("Failed to create booking");

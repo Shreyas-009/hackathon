@@ -12,7 +12,7 @@ const Login = () => {
   const onSubmit = async (data) => {
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/auth/login`,
+        `https://rag-pickers-app.vercel.app/api/auth/login`,
         data
       );
       login(res.data.token);

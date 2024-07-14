@@ -12,7 +12,7 @@ const RegisterPicker = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/pickers`,
+        `https://rag-pickers-app.vercel.app/api/pickers`,
         data,
         {
           headers: {

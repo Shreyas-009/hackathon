@@ -9,11 +9,14 @@ const BookingList = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/bookings`, {
-          headers: {
-            "x-auth-token": token,
-          },
-        });
+        const res = await axios.get(
+          `https://rag-pickers-app.vercel.app/api/bookings`,
+          {
+            headers: {
+              "x-auth-token": token,
+            },
+          }
+        );
         setBookings(res.data);
       } catch (err) {
         console.error(err);

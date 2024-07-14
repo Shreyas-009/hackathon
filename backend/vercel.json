@@ -1,11 +1,5 @@
 {
   "version": 2,
   "builds": [{ "src": "*.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/" }],
-  "env": {
-    "MONGODB_URI": "mongodb+srv://shreyastungar762:rag_pickers_app@cluster0.caqxjfb.mongodb.net/",
-    "JWT_SECRET": "supersecretkey",
-    "ENCRYPTION_KEY": "thisisaverysecureencryptionkey",
-    "PORT": "8080"
-  }
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
 }

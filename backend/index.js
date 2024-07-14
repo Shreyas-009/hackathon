@@ -23,7 +23,7 @@ const io = socketIo(server, {
 connectDB();
 app.use(
   cors({
-    origin: "*",
+    origin: [""],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
